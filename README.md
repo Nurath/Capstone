@@ -51,7 +51,7 @@ The project is organized into four key milestones:
 ## Installation
 1. **Clone the Repository**
    ```bash
-   [git clone https://github.com/Nurath/Capstone.git](https://github.com/Nurath/Capstone.git)
+   git clone https://github.com/Nurath/Capstone.git
    cd Capstone
    ```
 2. **Install Dependencies**
@@ -89,5 +89,5 @@ Contributions are welcome! Please submit issues or pull requests. Follow the est
 This project is licensed under the MIT License.
 
 ## Acknowledgments
-- **Dataset Authors**: Diego Tosato, Davide Dalle Pezze, Chiara Masiero, Gian Antonio Susto, Alessandro Beghi (citeturn0file0).
+- **Dataset Authors**: Diego Tosato, Davide Dalle Pezze, Chiara Masiero, Gian Antonio Susto, Alessandro Beghi.
 - Thanks to the industrial partners and research teams supporting the development of advanced AI solutions for smart manufacturing.
