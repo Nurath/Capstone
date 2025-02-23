@@ -18,14 +18,26 @@ The dataset, titled **Alarm Logs of Industrial Packaging Machines** (citet
 ## Project Structure
 ```
 .
-├── dataset.py                  # Data preprocessing and dataset creation scripts
-├── raw/                        # Raw alarm log files (e.g., alarms.csv)
-├── processed/                  # Processed dataset outputs in various formats
+Capstone/
+├── Dataset/
+│   ├── alarms_log_data.zip
+│   │   ├── raw/
+│   │   │   └── alarms.csv
+│   │   └── processed/
+│   │       ├── all_alarms.json
+│   │       ├── all_alarms.npz
+│   │       └── all_alarms.pickle
+│   ├── dataset.py            # Data preprocessing and dataset creation scripts
+│   └── README.md             # Instructions and overview for the dataset
+├── EDA And Preprocessing/
+│   ├── EDA_and_Preprocessing.ipynb  # Notebook for exploratory data analysis and preprocessing
+│   └── README.md                    # Instructions and context for the EDA work
 ├── models/                     # Machine learning model implementations
-├── chatbot/                    # RAG-based chatbot components
-├── docs/                       # Documentation and presentation slides
-├── README.md                   # Project overview and instructions
-└── requirements.txt            # Python dependency list
+├── chatbot/                    # RAG-based chatbot components for troubleshooting
+├── docs/                       # Additional documentation and presentation slides
+├── requirements.txt            # Python dependency list
+└── README.md                   # Top-level project overview and instructions
+
 ```
 
 ## Milestones & GitHub Issues
