@@ -1,4 +1,4 @@
-# Implement Fault Identification via Alarm Clustering and Visualization
+# Fault Identification via Alarm Clustering and Visualization
 
 ## Overview
 
