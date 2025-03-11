@@ -4,7 +4,7 @@
 This project leverages advanced machine learning and AI techniques to detect anomalies, forecast future alarms, and classify faults in industrial packaging machines. By analyzing comprehensive alarm logs, the project aims to enable proactive maintenance, reduce downtime, and improve overall operational efficiency in line with Industry 4.0 initiatives.
 
 ## Dataset Description
-The dataset, titled **Alarm Logs of Industrial Packaging Machines** (citeturn0file0), includes:
+The dataset, titled **Alarm Logs of Industrial Packaging Machines** (https://ieee-dataport.org/open-access/alarm-logs-packaging-industry-alpi), includes:
 - **Raw Data**: A CSV file (`alarms.csv`) containing timestamped alarm codes and machine serial numbers from 20 machines worldwide (Feb 21, 2019 – Jun 17, 2020).
 - **Processed Data**: Preprocessed formats (JSON, Pickle, NPZ) that provide training and testing sequences for tasks such as anomaly detection, next alarm forecasting, and fault classification.
 
