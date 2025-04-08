@@ -1,0 +1,11 @@
+langchain
+langchain-ollama
+langchain-chroma
+pandas
+Cython
+seaborn
+tensorflow
+scikit-learn
+statsmodels
+plotly
+prophet
