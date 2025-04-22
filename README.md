@@ -1,7 +1,8 @@
-# Anomaly Detection in Industrial Packaging Machines
+#  AI-Powered Predictive Maintenance and RAG Troubleshooting
 
 ## Overview
-This project leverages advanced machine learning and AI techniques to detect anomalies, forecast future alarms, and classify faults in industrial packaging machines. By analyzing comprehensive alarm logs, the project aims to enable proactive maintenance, reduce downtime, and improve overall operational efficiency in line with Industry 4.0 initiatives.
+his project combines advanced AI techniques for anomaly detection, fault classification, and predictive maintenance with a Retrieval-Augmented Generation (RAG) chatbot for real-time equipment troubleshooting. Designed for industrial packaging machines, the system empowers proactive maintenance aligned with Industry 4.0 standards.
+
 
 ## Dataset Description
 The dataset, titled **Alarm Logs of Industrial Packaging Machines** (https://ieee-dataport.org/open-access/alarm-logs-packaging-industry-alpi), includes:
