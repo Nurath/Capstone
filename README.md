@@ -92,6 +92,7 @@ The project is organized into four key milestones:
   python models/train_anomaly.py
   ```
 - **RAG CHATBOT DEPLOYMENT**:
+  
   ***Local Deployment***
   - Uses local FAISS, openAI Enbedding, Deepseek or OpenAI, and Manual PDF.
   - Images and chunks stored in local files.
