@@ -1,19 +1,22 @@
-# Anomaly Detection in Industrial Packaging Machines
+#  AI-Powered Predictive Maintenance and RAG Troubleshooting
 
 ## Overview
-This project leverages advanced machine learning and AI techniques to detect anomalies, forecast future alarms, and classify faults in industrial packaging machines. By analyzing comprehensive alarm logs, the project aims to enable proactive maintenance, reduce downtime, and improve overall operational efficiency in line with Industry 4.0 initiatives.
+This project combines advanced AI techniques for anomaly detection, fault classification, and predictive maintenance with a Retrieval-Augmented Generation (RAG) chatbot for real-time equipment troubleshooting. Designed for industrial packaging machines, the system empowers proactive maintenance aligned with Industry 4.0 standards.
+
 
 ## Dataset Description
 The dataset, titled **Alarm Logs of Industrial Packaging Machines** (https://ieee-dataport.org/open-access/alarm-logs-packaging-industry-alpi), includes:
 - **Raw Data**: A CSV file (`alarms.csv`) containing timestamped alarm codes and machine serial numbers from 20 machines worldwide (Feb 21, 2019 – Jun 17, 2020).
 - **Processed Data**: Preprocessed formats (JSON, Pickle, NPZ) that provide training and testing sequences for tasks such as anomaly detection, next alarm forecasting, and fault classification.
 
-## Project Objectives
-- **Anomaly Detection**: Identify unusual patterns in alarm logs to preempt equipment failures.
-- **Forecasting**: Predict future alarms using time-series forecasting models.
-- **Fault Classification**: Categorize faults to streamline maintenance processes.
-- **Real-Time Monitoring & Optimization**: Integrate LLM-based agents for fault identification and continuous system improvement.
-- **Chatbot for Troubleshooting**: Develop a Retrieval-Augmented Generation (RAG) chatbot to assist operators with real-time diagnostics.
+## 🎯 Project Objectives
+- **Anomaly Detection:** Spot deviations in alarm behavior
+- **Time-Series Forecasting:** Predict future alarms/events
+- **Fault Classification:** Categorize equipment issues using ML
+- **RAG Chatbot:** Guide technicians with image- and text-based instructions from manuals
+- **LLM Integration:** Leverage language models for real-time fault detection and resolution
+
+---
 
 ## Project Structure
 ```
