@@ -91,11 +91,24 @@ The project is organized into four key milestones:
   ```bash
   python models/train_anomaly.py
   ```
-- **Chatbot Interface**:  
-  Launch the RAG-based chatbot from the `chatbot/` directory.
+- **RAG CHATBOT DEPLOYMENT**:
+  ***Local Deployment***
+  - Uses local FAISS, openAI Enbedding, Deepseek or OpenAI, and Manual PDF.
+  - Images and chunks stored in local files.
+ 
   ```bash
-  python chatbot/run_chatbot.py
+  cd RAG_PDF/
+  streamlit run app.py
   ```
+
+  ***Cloud Deployment***
+  - Uses MongoDB for Text chunks and embeddings and AWS S3 for images.
+ 
+    ```bash
+    cd RAG_PDF_1/
+    streamlit run app.py
+    ```
+Make sure .env is configured with OpenAIor DeepSeek, MongoDB URI and AWS keys.
 
 ## Contributing
 Contributions are welcome! Please submit issues or pull requests. Follow the established milestones and GitHub issue plan for structured development.
