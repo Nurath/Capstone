@@ -67,6 +67,8 @@ def process_uploaded_pdf(_uploaded_file, filename):
         json.dump(chunks, f, indent=2)
 
     embeddings, texts = embed_chunks(chunks)
+    if embeddings is None or len(embeddings) == 0 or len(embeddings.shape) < 2:
+        raise ValueError("Embedding failed or returned invalid shape.")
     store_faiss_index(embeddings, dim=embeddings.shape[1], path=os.path.join(folder_path, "faiss_index.index"))
 
     return base_name
@@ -96,7 +98,9 @@ if not manual_file:
 # 🚀 Process the manual
 if manual_file:
     with st.spinner("Processing the uploaded manual..."):
-        processed_pdf_name = process_uploaded_pdf(manual_file, os.path.basename(downloaded_path))
+        manual_filename = getattr(manual_file, "name", "uploaded_manual.pdf")
+        processed_pdf_name = process_uploaded_pdf(manual_file, manual_filename)
+
 
         st.success(f"Processed and added: {processed_pdf_name}")
 
@@ -154,7 +158,7 @@ Context:
 
 Question: {user_input}"""
 
-        llm_answer = generate_llm_response(prompt, openai_api_key=openai_api_key)
+        llm_answer = generate_llm_response(prompt, model_name= "deepseek-chat")
 
         include_images = any(word in user_input.lower() for word in ["image", "diagram", "drawing", "picture", "figure"])
         images_to_send = chunk.get("metadata", {}).get("images_base64", []) if include_images else []
