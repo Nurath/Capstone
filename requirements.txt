@@ -31,3 +31,6 @@ dotenv
 faiss-cpu
 pymongo[srv]
 boto3
+streamlit
+pytessaract
+pdf2image
