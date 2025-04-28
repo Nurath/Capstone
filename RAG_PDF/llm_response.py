@@ -42,3 +42,16 @@ def generate_llm_response(prompt, model_name="gpt-3.5-turbo", openai_api_key=ope
 
     else:
         raise ValueError(f"Unsupported model: {model_name}")
+
+def generate_answer_from_context(context, user_query, model_name="deepseek-chat"):
+    """Prepare prompt and generate LLM-based answer."""
+    prompt = f"""Using the following manual content, answer the question clearly and step-by-step.
+If any image references like [Image: filename] appear, mention them only if user asks for images.
+
+Context:
+{context}
+
+Question: {user_query}
+"""
+    llm_answer = generate_llm_response(prompt, model_name=model_name)
+    return llm_answer
