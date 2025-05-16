@@ -18,7 +18,12 @@ The dataset, titled **Alarm Logs of Industrial Packaging Machines** (https://iee
 
 ---
 
-## Project Structure
+# Agent Assist Project
+
+This project consists of a Flask backend and a React frontend that work together to provide an AI-powered agent assistance system.
+
+## Core Project Structure
+
 ```
 .
 Capstone/
@@ -32,16 +37,113 @@ Capstone/
 │   │       └── all_alarms.pickle
 │   ├── dataset.py            # Data preprocessing and dataset creation scripts
 │   └── README.md             # Instructions and overview for the dataset
-├── EDA And Preprocessing/
-│   ├── EDA_and_Preprocessing.ipynb  # Notebook for exploratory data analysis and preprocessing
-│   └── README.md                    # Instructions and context for the EDA work
-├── models/                     # Machine learning model implementations
-├── chatbot/                    # RAG-based chatbot components for troubleshooting
-├── docs/                       # Additional documentation and presentation slides
-├── requirements.txt            # Python dependency list
-└── README.md                   # Top-level project overview and instructions
-
+AgentAssistProject/
+├── AgentAssistBackEnd/
+│   ├── agent/           # Backend agent implementation
+│   ├── app.py          # Main Flask application
+│   └── requirements.txt # Python dependencies
+│
+└── AgentAssistFrontEnd/
+    ├── src/            # React source code
+    ├── public/         # Static assets
+    ├── package.json    # Node.js dependencies
+    └── various config files (vite, typescript, etc.)
 ```
+
+## Prerequisites
+
+- Python 3.8 or higher
+- Node.js 16 or higher
+- npm or yarn package manager
+
+## Backend Setup
+
+1. Navigate to the backend directory:
+   ```bash
+   cd AgentAssistBackEnd
+   ```
+
+2. Create a virtual environment (recommended):
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Create a `.env` file in the backend directory with the following environment variables:
+   ```
+   OPENAI_API_KEY=your_api_key_here
+   FLASK_APP=app.py
+   FLASK_ENV=development
+   ```
+
+5. Run the backend server:
+   ```bash
+   python app.py
+   ```
+   The backend server will start on `http://localhost:5000`
+
+## Frontend Setup
+
+1. Navigate to the frontend directory:
+   ```bash
+   cd AgentAssistFrontEnd
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+   The frontend will be available at `http://localhost:5173`
+
+## Running the Project
+
+1. Start the backend server first (follow Backend Setup steps 4-5)
+2. In a separate terminal, start the frontend development server (follow Frontend Setup steps 2-3)
+3. Open your browser and navigate to `http://localhost:5173`
+
+## Development
+
+- Backend API endpoints are available at `http://localhost:5000`
+- Frontend development server supports hot reloading
+- Backend uses Flask for the API server
+- Frontend uses React with TypeScript, Vite, and Tailwind CSS
+
+## Building for Production
+
+### Backend
+The backend is ready for production deployment. Make sure to set appropriate environment variables in production.
+
+### Frontend
+To build the frontend for production:
+```bash
+cd AgentAssistFrontEnd
+npm run build
+# or
+yarn build
+```
+The built files will be in the `dist` directory.
+
+## Additional Notes
+
+- Make sure both backend and frontend servers are running simultaneously
+- The backend requires various Python packages for AI/ML functionality
+- The frontend uses modern React features and TypeScript for type safety
+- Tailwind CSS is used for styling
+- The project uses Vite as the build tool for the frontend 
 
 ## Milestones & GitHub Issues
 The project is organized into four key milestones:
@@ -63,24 +165,7 @@ The project is organized into four key milestones:
    - Setting up comprehensive evaluation and hyperparameter tuning pipelines.
    - Conducting robustness testing and further system refinements.
 
-## Installation
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/Nurath/Capstone.git
-   cd Capstone
-   ```
-2. **Install Dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. **(Optional) Create a Virtual Environment**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows use: venv\Scripts\activate
-   pip install -r requirements.txt
-   ```
-
-## Usage
+## Other Usage
 - **Data Processing**:  
   Use `dataset.py` to convert raw alarm logs into processed formats.
   ```bash
